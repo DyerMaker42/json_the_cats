@@ -3,4 +3,4 @@ const request = require('request');
 let fullCatName = process.argv[2];
 let catName = fullCatName.split('').slice(0,4).join('')
 console.log(catName)
-//request(`https://api.thecatapi.com/v1/breeds/search`)
+request(`https://api.thecatapi.com/v1/breeds/search?breed_ids=${catName}`)
