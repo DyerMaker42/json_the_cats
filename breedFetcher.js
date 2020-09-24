@@ -8,7 +8,9 @@ request(`https://api.thecatapi.com/v1/images/search?breed_ids=Sibe`, (err, resp,
 if (err){
   console.log(err)
 } else {
-  console.log(body)
+  const data = JSON.parse(body);
+  console.log(data[0].breeds[0].description);
+  console.log(typeof data, typeof body)
 
 }
 }
